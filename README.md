@@ -6,4 +6,4 @@ Durante o primeiro período do curso de graduação de Sistemas de Informação 
 
 Em cada pasta, um arquivo Markdown contendo as instruções da questão e um arquivo .py com a minha resolução aprovada.
 
-Por fim, também foi incluída a questão especial criada por mim para o processo seletivo da monitoria de Introdução à Programação, em que fui aprovado.
+Também foram incluídas a questão especial criada por mim para o processo seletivo da monitoria de Introdução à Programação, em que fui aprovado, e as questões criadas por mim para treinamento dos novos alunos que entraram na cadeira.
