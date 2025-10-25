@@ -1,0 +1,140 @@
+section .data
+  ;partes da frase do output
+  msg_input db 'Digite o numero de discos!', 10
+  msg_input_len equ $ - msg_input
+  msg1 db 'Mova disco ', 0
+  msg1_len equ $ - msg1
+  msg2 db ' da Torre ', 0
+  msg2_len equ $ - msg2
+  msg3 db ' para a Torre ', 0
+  msg3_len equ $ - msg3
+  ;output pra quebra de linha
+  quebra_linha db 10
+  quebra_linha_len equ $ - quebra_linha
+  ;output pra fim do código
+  msg_concluido db 'Concluido!', 10, 0
+  msg_concluido_len equ $ - msg_concluido
+
+section .bss
+  espaco_digito resb 1 ;buffer pra 1 digito só
+  espaco_input resb 2 ;buffer pro dígito inicial com o \n
+
+section .text
+  global _start
+
+  ;função pra imprimir string
+  ;rsi e rdx já estão nos registradores certos
+  print_string:
+      mov rax, 1      ;sys_write
+      mov rdi, 1      ;1 é stdout
+      syscall
+      ret
+
+  ;função pra imprimir o dígito em al
+  print_char:  
+      mov rax, 1 ;sys_write
+      mov rdi, 1 ;1 é stdout
+      mov rsi, espaco_digito ;o que vai aparecer no terminal é o que está em espaço_digito
+      mov rdx, 1 ;o espaço ocupado é de 1 byte
+      syscall
+      ret
+
+  _start:
+      ;mensagem inicial
+      mov rsi, msg_input
+      mov rdx, msg_input_len
+      call print_string
+
+      ;receber o input
+      mov rax, 0 ;sys_read
+      mov rdi, 0 ;0 é stdin
+      mov rsi, espaco_input ;o input vai pro endereço de memória espaço_input
+      mov rdx, 2 ;o espaço ocupado é de 2 bytes, porque é dígito + \n
+      syscall
+   
+      ;converter ascii pra valor numérico
+      mov bh, byte [espaco_input] ;coloca o byte digitado em rdi e preenche o "vazio" com 0
+      sub bh, '0' ;pega o byte menos significativo, que é o que tem o dígito, e converte em valor numérico
+      ;a subtração é do valor ascii do dígito pelo valor ascii do 0, que dá o valor numérico real
+   
+      ;parâmetros da função
+      mov r10, 'A' ;a torre de origem
+      mov r13, 'B' ;a torre auxiliar
+      mov r15, 'C' ;a torre de destino
+      call hanoi
+
+      ;imprimir msg final
+      mov rsi, msg_concluido
+      mov rdx, msg_concluido_len
+      call print_string
+
+      ;encerrar programa
+      mov rax, 60 ;sys_exit
+      mov rdi, 0 ;0 indica sucesso, código funcionando
+      syscall
+
+  ;função pra simular hanoi
+  hanoi:
+
+      ;caso base
+      cmp bh, 0
+      je .hanoi_fim
+   
+      ;1° chamada: hanoi(n-1, origem, destino, auxiliar)
+      push bx
+      push r15 ;salva o valor que tava no destino
+      push r13 ;salva o valor que tava no auxiliar
+      push r10 ;salva o valor que tava em origem
+      dec bh ;tira 1 do número de discos
+
+      mov r9, r15 ;guarda destino num local temporário
+      mov r15, r13 ;destino vira auxiliar (r15 é auxiliar)
+      mov r13, r9 ;auxiliar vira destino (r13 é destino)
+      call hanoi ;checkpoint 1
+
+      inc bh ;incrementa 1 de volta para n, pois saiu do return com 0
+
+      ;imprimir mensagem de mover o disco
+      mov rsi, msg1
+      mov rdx, msg1_len
+      call print_string ;imprime primeira parte da msg
+
+      add bh, '0' ;converte o número pra ascii somando com ascii 0
+      mov [espaco_digito], bh ;coloca o caractere no buffer
+      call print_char ;imprime o número do disco
+      sub bh, '0' ;converte o ascii do número de discos de volta pra valor numérico
+
+      mov rsi, msg2
+      mov rdx, msg2_len
+      call print_string ;imprime segunda parte da msg
+
+      mov [espaco_digito], r10 ;coloca o caractere no buffer
+      call print_char ;imprime a "origem"
+   
+      mov rsi, msg3
+      mov rdx, msg3_len
+      call print_string ;imprime terceira parte da msg
+
+      mov [espaco_digito], r13 ;coloca o caractere no buffer
+      call print_char ;imprime o "destino"
+   
+      mov rsi, quebra_linha
+      mov rdx, quebra_linha_len
+      call print_string ;imprime a quebra de linha
+
+      ;2° chamada: hanoi(n-1, auxiliar, destino, origem)
+      dec bh
+      mov r9, r13
+      mov r13, r10
+      mov r10, r15
+      mov r15, r9
+      call hanoi ;checkpoint 2
+
+      pop r10 ;restaura origem
+      pop r13 ;restaura destino
+      pop r15 ;restaura auxiliar
+      pop bx
+   
+      ;fim da função
+        .hanoi_fim:
+      ret
