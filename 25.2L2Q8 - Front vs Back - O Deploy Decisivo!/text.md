@@ -1,93 +1,96 @@
 # Front vs Back: O Deploy Decisivo!
 
-Cansados dos debates intermináveis sobre interfaces e servidores, 12 desenvolvedores de Front-End e Back-End finalmente encontraram uma forma de resolver suas diferenças: uma partida épica de boa e velha queimada!
+Cansados dos debates intermináveis sobre interfaces e servidores, 12 desenvolvedores de Front-End e Back-End finalmente encontraram uma forma de resolver suas diferenças: uma partida épica de boa e velha **queimada**!
 
-No entanto, depois de passarem horas grudados em suas cadeiras, nem suas costas aguentam mais passar uma partida inteira em pé! E é por isso que você, aluno do CIn, foi convocado pelos devs para criar uma simulação da partida! Quem sabe assim eles consigam desenferrujar suas habilidades?
+No entanto, depois de passarem horas grudados em suas cadeiras, nem suas costas aguentam mais passar uma partida inteira em pé! E é por isso que você, aluno do CIn, foi convocado pelos devs para criar uma simulação da partida que permitam eles desenferrujar suas habilidades!
 
-# Input
+## Input
 
-Cada time será composto obrigatoriamente por **6 jogadores cada**.
+Cada time será composto obrigatoriamente por 6 jogadores cada.
 
-Antes de iniciar a partida, deve-se pedir **qual time começará com a bola**. As únicas entradas válidas serão “**Front-End**” e “**Back-End**”:
+Antes de iniciar a partida, deve-se pedir qual time começará com a bola. As únicas entradas válidas serão “**Front-End**” e “**Back-End**”:
 
-time_atacante (str)
+> `time_atacante (str)`
+> 
 
-OBS.: Todos os jogadores devem começar no campo, fora das áreas de morto.
+Todos os jogadores devem começar no campo, fora das áreas de morto.
 
-# Ataque em campo
+### Ataque em campo
 
-Cada lance de bola dos jogadores em campo será representado por uma entrada, que pode ser “acertou” ou “errou”.
+Cada lance de bola dos jogadores em campo será representado por uma entrada, que pode ser “**acertou**” ou “**errou**”.
 
-resultado_ataque (str)
+> `resultado_ataque (str)`
+> 
 
 Caso a entrada seja “**acertou**”, deve-se passar um jogador do time acertado para a sua área do morto. A bola deve ser passada para esse jogador, que irá jogá-la do morto.
 
 Por outro lado, caso a entrada seja “**errou**”, há duas possibilidades de continuação:
 
-Se **não houver** jogadores no morto do time atacante (ou seja, se o time que acabou de jogar a bola estiver todo em campo), o turno apenas passará para o outro time.
-Se **já houver** jogadores no morto do time atacante (ou seja, há jogadores na área do morto do time defensor), uma nova entrada deve ser pedida para saber se o time adversário foi capaz de** pegar a bola ou se deixou ela escapar para o morto**:
-resultado_defesa (str)
+- Se **não houver** jogadores no morto do time acertado (ou seja, se o time que acabou de jogar a bola estiver todo em campo), o turno apenas passará para o outro time.
+- Se **já houver** jogadores no morto do time acertado, uma nova entrada deve ser pedida para saber se o time adversário foi capaz de pegar a bola ou se deixou ela escapar para o morto:
+
+> `resultado_defesa (str)`
+> 
 
 Para essa nova entrada, também há duas possibilidades:
 
-Caso a entrada seja “**pegou**”, o turno passa normalmente para o time defensor, pois nenhum jogador foi acertado e a bola não escapou para o morto.
-Caso a entrada seja “**deixou**”, a bola passa para o morto do time atacante. Dessa forma, o time que acabou de atacar irá atacar mais uma vez, agora pelo morto.
+- Caso a entrada seja “**pegou**”, o turno passa normalmente para o time que foi atacado, pois nenhum jogador foi acertado e a bola não escapou para o morto.
+- Caso a entrada seja “**deixou**”, a bola passa para o morto. Dessa forma, o time que acabou de atacar irá atacar mais uma vez, agora pelo morto.
 
-# Ataque no morto
+### Ataque no morto
 
-As regras do morto são as mesmas dos jogadores em campo:
+As regras do morto são as **mesmas** dos jogadores em campo:
 
-Primeiro, uma entrada sobre se um jogador do time oponente foi acertado (”acertou”) ou não (”errou”).
-
-resultado_ataque (str)
-
-Se **não foi acertado**, pede-se uma entrada sobre se o time oponente foi capaz de pegar a bola (”pegou”) ou se deixou ela escapar para a área de campo da outra equipe (”deixou”).
-
-resultado_defesa (str)
-
-Porém, se um jogador do time oponente **foi acertado**, o jogador no morto retorna para área de campo, enquanto um jogador do time acertado vai para a sua área de morto.
-
-# Considerações finais
+- Primeiro, uma entrada sobre se um jogador do time oponente foi acertado ou não.
+- Se **não foi** acertado, pede-se uma entrada sobre se o time oponente foi capaz de pegar a bola ou se deixou ela escapar para a área de campo da outra equipe.
+- Se **foi** acertado, o jogador no morto *retorna* para área de campo, enquanto um jogador do time acertado vai para a sua área de morto.
 
 Os turnos seguirão até que um dos times não tenha mais nenhum jogador em campo.
 
-Além disso, para todas as entradas existentes, caso algo inválido seja digitado, o programa deve pedir novamente o input até que receba uma entrada válida.
+**OBS**: Para *todas* as entradas, caso algo inválido seja digitado, o programa deve pedir novamente o input até que receba uma entrada válida.
 
-# Output
+## Output
 
-Antes de pedir qualquer entrada, o programa deve imprimir:
+Antes de pedir qualquer entrada, o programa deve imprimir: 
 
-Serão 12 desenvolvedores defendendo a honra de seus lados do código! Que vença a melhor stack!
+> `Serão 12 desenvolvedores defendendo a honra dos seus lados do código! Que vença a melhor stack!`
+> 
 
 Sempre que um jogador em campo acertar um jogador adversário, deve-se imprimir:
 
-{time_atacante} acertou um jogador!
+> `{time_atacante} acertou um jogador!`
+> 
 
 Da mesma forma, sempre que um jogador no morto acertar um jogador adversário, deve-se imprimir:
 
-O morto do {time_atacante} acertou um jogador!
+> `O morto do {time_atacante} acertou um jogador!`
+> 
 
 Em ambos os casos acima, logo após a mensagem de acerto, deve-se imprimir o estado atual de jogadores em campo da seguinte forma:
 
-Back-End: {backs_em_campo} dev(s) em campo. | Front-End: {fronts_em_campo} dev(s) em campo.
+> `Back-End: {backs_em_campo} dev(s) em campo. | Front-End: {fronts_em_campo} dev(s) em campo.`
+> 
 
 Já a mensagem de vitória irá variar de qual time saiu como vencedor.
 
-Caso o time “Back-End” vença, deve-se imprimir:
+Caso o time “**Back-End**” vença, deve-se imprimir:
 
-Vitória do Back-End! Restaram {backs_em_campo} devs ainda mantendo o servidor de pé!
+> `Vitória do Back-End! Restaram {backs_em_campo} devs ainda mantendo o servidor de pé!`
+> 
 
-Caso o time “Front-End” vença, deve-se imprimir:
+Caso o time “**Front-End**” vença, deve-se imprimir:
 
-Vitória do Front-End! Restaram {fronts_em_campo} devs ainda segurando o layout!
+> `Vitória do Front-End! Restaram {fronts_em_campo} devs ainda segurando o layout!`
+> 
 
 Quanto aos casos de entrada inválida, deve-se imprimir:
 
-Entrada inválida!
+> `Entrada inválida!`
+> 
 
-OBS1: Não há casos de empate.
+**OBS1**: Não há casos de empate.
 
-OBS2: Quando um dos times chegar a 0 jogadores em campo, a mensagem de acerto e a mensagem do estado atual da partida ainda devem ser impressas, seguidas logo depois da mensagem de vitória do time que venceu.
+**OBS2**: Quando um dos times chegar a 0 jogadores em campo, a mensagem de acerto e a mensagem do estado atual da partida ainda devem ser impressas, seguidas logo depois da mensagem de vitória do time que venceu.
 
 # Examples
 
