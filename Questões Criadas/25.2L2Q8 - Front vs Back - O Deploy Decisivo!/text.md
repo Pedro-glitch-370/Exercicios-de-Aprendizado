@@ -96,7 +96,7 @@ Quanto aos casos de entrada inválida, deve-se imprimir:
 
 **Case: 1**
 
-Input
+Input:
 
 Front-End
 acertou
@@ -125,7 +125,7 @@ errou
 pegou
 acertou
 
-Output
+Output:
 
 Serão 12 desenvolvedores defendendo a honra de seus lados do código! Que vença a melhor stack!
 Front-End acertou um jogador!
@@ -154,7 +154,7 @@ Vitória do Front-End! Restaram 5 devs ainda segurando o layout!
 
 **Case: 2**
 
-Input
+Input:
 
 Back-End
 errou
@@ -185,7 +185,7 @@ errou
 pegou
 acertou
 
-Output
+Output:
 
 Serão 12 desenvolvedores defendendo a honra de seus lados do código! Que vença a melhor stack!
 Front-End acertou um jogador!
@@ -212,7 +212,7 @@ Vitória do Back-End! Restaram 6 devs ainda mantendo o servidor de pé!
 
 **Case: 3**
 
-Input
+Input:
 
 acertou
 Back-End
@@ -253,7 +253,7 @@ pegou
 acertou
 acertou
 
-Output
+Output:
 
 Serão 12 desenvolvedores defendendo a honra de seus lados do código! Que vença a melhor stack!
 Entrada inválida!

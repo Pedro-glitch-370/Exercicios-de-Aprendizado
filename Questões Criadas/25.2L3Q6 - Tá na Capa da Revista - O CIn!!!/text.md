@@ -116,7 +116,7 @@ Se tiver aparecido “**Inês Brasil**”, imprima:
 
 **Case: 1**
 
-Input
+Input:
 
 3
 DeGuê?
@@ -135,7 +135,7 @@ Desfilante de n° 3: Arthur Jorge!
 
 **Case: 2**
 
-Input
+Input:
 
 6
 Tha Beauty
