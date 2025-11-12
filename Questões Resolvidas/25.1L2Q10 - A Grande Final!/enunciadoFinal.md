@@ -1,4 +1,5 @@
 # A Grande Final!
+*Nível: Difícil*
 
 Enfim chegamos à grande decisão da copa do mundo de tênis de mesa! De um lado, temos o grande tenista chinês Lin Shidong, atual melhor jogador do esporte do planeta. Do outro, a grande sensação do tênis de mesa mundial, uma estrela em ascensão e que vem crescendo nos momentos decisivos: o brasileiro Hugo Calderano!
 

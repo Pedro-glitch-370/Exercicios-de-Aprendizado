@@ -1,4 +1,5 @@
 # Decodificador do Dragão
+*Nível: Difícil*
 
 Em mais uma de suas muitas aventuras em busca das esferas do dragão, Goku e Bulma se deparam com um imenso problema: o dispositivo rastreador das esferas foi destruído após a invasão de Piccolo Daimaoh à Terra!
 

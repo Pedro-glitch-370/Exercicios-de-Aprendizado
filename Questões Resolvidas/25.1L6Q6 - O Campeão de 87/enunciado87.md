@@ -1,4 +1,5 @@
 # O Campeão de 87
+*Nível: Difícil*
 
 O tema do campeão do campeonato brasileiro de 1987 sempre é muito polêmico. Enquanto o Flamengo ganhou na bola, o Sport ganhou no tribunal.
 

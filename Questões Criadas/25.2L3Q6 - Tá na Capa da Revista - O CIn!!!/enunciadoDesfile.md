@@ -1,4 +1,5 @@
 # Tá na Capa da Revista: O CIn!!!
+*Nível: Médio*
 
 O tapete vermelho do CIn está pronto para receber as maiores estrelas da computação! Um desfile de gala, organizado na sempre majestosa Aníbal Fernandes, que irá contar com o brilho dos monitores chefes da cadeira mais famosa do glorioso Centro de Informática!
 

@@ -1,4 +1,5 @@
 # Uma Noite com o Frederico!
+*Nível: Difícil*
 
 Um arrepio desagradável toma seu corpo. Suas pernas logo tremem feito duas folhas de papel e o sour frio começa a escorrer pela testa. Depois de finalmente ficar cara a cara com a temida quinta lista de IP, quase não lhe restam forças para encarar as faces monstruosas da última questão, moldadas nas formas dos mascotes mais memoráveis da franquia de terror “**Five Nights at Freddy’s**”!
 

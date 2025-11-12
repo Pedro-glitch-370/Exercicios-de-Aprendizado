@@ -1,4 +1,5 @@
 # Glavin! Essa máquina só pode ser piada!
+*Nível: Fácil*
 
 *“ — Isso exigiria algum tipo de rebigulador, o que é um conceito tão ridículo que me dá vontade de rir alto e cair na gargalhada!”*
 

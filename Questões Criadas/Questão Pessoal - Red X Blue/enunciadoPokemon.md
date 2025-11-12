@@ -1,6 +1,7 @@
 OBS: A questão abaixo foi criada por mim mesmo para o processo de seleção da monitoria de Introdução à Programação, contribuindo para a minha aprovação ao fim do processo seletivo. O foco da questão é o uso de dicionários.
 
 # Red X Blue - A Clássica Final do Universo Pokémon!!
+*Nível: Médio*
 
 Depois de inúmeras derrotas, resets e consoles jogados na parede, os mestres pokémons do CIn se revoltaram: perder para o campeão de Kanto, Blue, logo em seu último pokémon, já não era mais algo aceitável!
 

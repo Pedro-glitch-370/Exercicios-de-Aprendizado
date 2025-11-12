@@ -1,4 +1,5 @@
 # Roubo na Gaiola Encantada!
+*Nível: Fácil*
 
 É madrugada do dia 31 de Outubro sobre as águas de um rio escuro e profundo. A Gaiola Encantada, o Vapor Fantasma dos riachos brasileiras, conduz dezenas de espíritos errantes e almas perdidas, que terminam de se arrumar para mais um inesquecível Dia das Bruxas com muita festa e guloseima!
 

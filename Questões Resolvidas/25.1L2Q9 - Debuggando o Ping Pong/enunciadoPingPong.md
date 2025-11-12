@@ -1,4 +1,5 @@
 # Debuggando o Ping Pong
+*Nível: Difícil*
 
 O campeonato de tênis de mesa do InterCIn está próximo e os alunos de IP precisam mostrar que entendem mais do que apenas segurar uma raquete. Eles precisam mostrar domínio sobre lógica e, obviamente, programação. Para isso, os alunos foram convocados para um desafio especial: eles receberam o desafio de criar um programa que faça a simulação de rodadas de tênis de mesa com regras personalizadas.
 

@@ -1,4 +1,5 @@
 # Aprimorando a Build
+*Nível: Médio*
 
 Em um belo dia, César estava jogando Elden Ring no seu tempo livre, derrotando os inimigos e chefões durante seu caminho (morrendo de vez em quando, é claro).
 

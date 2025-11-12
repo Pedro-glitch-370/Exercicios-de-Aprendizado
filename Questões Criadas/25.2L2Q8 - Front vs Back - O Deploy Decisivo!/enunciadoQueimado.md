@@ -1,4 +1,5 @@
 # Front vs Back: O Deploy Decisivo!
+*Nível: Médio*
 
 Cansados dos debates intermináveis sobre interfaces e servidores, 12 desenvolvedores de Front-End e Back-End finalmente encontraram uma forma de resolver suas diferenças: uma partida épica de boa e velha **queimada**!
 

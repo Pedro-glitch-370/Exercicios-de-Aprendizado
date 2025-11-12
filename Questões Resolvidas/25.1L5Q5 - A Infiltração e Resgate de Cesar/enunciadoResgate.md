@@ -1,4 +1,5 @@
 # A Infiltração e Resgate de Cesar
+*Nível: Médio*
 
 Depois de uma longa caminhada por toda Ashina, Wolf acaba de descobrir que tem uma missão ultra secreta: resgatar César do salão principal, onde ele está preso há uma semana sem ler um capítulo de mangá. Em desespero, os professores do CIn te convocaram — você, um estudante brilhante — para ajudar Wolf a encontrar o caminho mais curto até César, antes que ele morra (de tédio).
 

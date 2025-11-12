@@ -1,4 +1,5 @@
 # Homem-Aranha vs Electro: A Última Sobrecarga
+*Nível: Médio*
 
 Nova York está em colapso! Electro está espalhando o caos, dominando quarteirões e causando apagões em toda a cidade. O Homem-Aranha é a última esperança de restaurar a energia e evitar a destruição total.
 
